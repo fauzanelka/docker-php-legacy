@@ -1,5 +1,7 @@
 FROM debian:bullseye
 
+LABEL org.opencontainers.image.source https://github.com/fauzanelka/docker-php-legacy
+
 ADD --chmod=755 https://github.com/shivammathur/php-builder/releases/latest/download/install.sh /usr/local/bin/php-installer
 
 RUN php-installer 7.1 release zts
